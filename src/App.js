@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import links from "./links";
+import "./App.css";
+import Banner from "./Banner";
+import CategoryRow from "./CategoryRow";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Banner />
+      <CategoryRow link={links.trending} title="Trending" isLargeRow />
+      <CategoryRow link={links.popular} title="Popular" />
+      <CategoryRow link={links.topRated} title="Top Rated" />
+      <CategoryRow link={links.upcoming} title="Upcoming" />
     </div>
   );
 }
